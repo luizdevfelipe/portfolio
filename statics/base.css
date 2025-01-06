@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+*{padding: 0px; margin: 0px; box-sizing: border-box;} 
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--azulMedio);
+}
+
+.position-relative {
+    position: relative;
+}
+
+.text-center {
+    text-align: center;
+}
