@@ -16,6 +16,9 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
         case 'timberman':
             var content = TimbermanContent();
             break;
+        case 'piano':
+            var content = PianoContent();
+            break;
     }
 
     modalTitle.textContent = content.title;
@@ -31,22 +34,22 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
             Veja no GitHub
         </a>
         <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
+            <div class="carousel-inner" style="height: 300px;">
                 <div class="carousel-item active">
-                    <img src="${content.images[0]}" class="d-block w-100" alt="...">
+                    <img src="${content.images[0]}" class="d-block w-100" alt="..." style="height: 100%;">
                 </div>
                 <div class="carousel-item">
-                    <img src="${content.images[1]}" class="d-block w-100" alt="...">
+                    <img src="${content.images[1]}" class="d-block w-100" alt="..." style="height: 100%;">
                 </div>
                 <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
+                    <img src="${content.images[2]}" class="d-block w-100" alt="..." style="height: 100%;">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" style="background-color:rgba(0, 0, 0, 0.2)">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" style="background-color:rgba(0, 0, 0, 0.2)">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -57,8 +60,17 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 function TimbermanContent() {
     return {
         title: 'Timberman-on-Arduino',
-        description: 'Esse foi um projeto realizado para a disciplina de Microprocessadores e Microcontroladores, onde foi utilizada a plataforma microcontrolada do Arduino para fazer a recriação do jogo virual <a href="https://store.steampowered.com/app/398710/Timberman/"target="_blank" rel="external">Timberman</a>.',
-        images: ['files/timberman/schema.png', 'files/timberman/timberman.gif'],
+        description: 'Esse foi um projeto realizado para a disciplina de Microprocessadores e Microcontroladores, onde foi utilizada a plataforma microcontrolada do Arduino para fazer a recriação do jogo virual <a href="https://store.steampowered.com/app/398710/Timberman/"target="_blank" rel="external">Timberman</a> onde o objetivo principal é quebrar o máximo de troncos possíveis sem ser atingido por eles.',
+        images: ['files/timberman/schema.png', 'files/timberman/projeto.png', 'files/timberman/timberman.gif'],
         url: 'https://github.com/luizdevfelipe/timberman-on-arduino'
+    }
+}
+
+function PianoContent() {
+    return {
+        title: 'Piano virtual com Gemini API',
+        description: 'Primeiro, esse projeto era apenas um piano virtual que tocava notas conforme as teclas eram pressionadas. Depois, com um conhecimento adquirido sobre APIs, foi implementado a API Gemini para o usuário inserir um prompt que é processado pelo Gemini e resulta em um conjunto de notas que são processadas pelo sistema anterior, automaticamente. Uma versão sem a API Gemini também está disponível e pode ser acessada em <a href="https://luizdevfelipe.github.io/piano/" target="_blank" rel="external">Piano Virtual</a>',
+        images: ['files/piano/piano.gif', 'files/piano/piano.png', 'files/piano/piano-site.png'],
+        url: 'https://github.com/luizdevfelipe/piano'
     }
 }
