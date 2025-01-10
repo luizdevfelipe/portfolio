@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+.tags {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5em;
+    justify-content: start;
+    align-items: center;
+    padding: 6px;
+    background-color: #bebebe46;
+    box-shadow: 0px 1px 6px 0px #00000033;
+}
+
+.tag {
+    border-radius: 5px;
+    padding: 4px;
+    box-shadow: 2px 2px 2px 0px #7e7e7e;
+}
+
+.arduino {
+    background-color: #008184;
+    color: white;
+}
+
+.cpp {
+    background-color: #F34B7D;
+    color: white;
+}
+
+.css {
+    background-color: #663399;
+    color: white;
+}
+
+.html {
+    background-color: #E34C26;
+    color: white;
+}
+
+.js {
+    background-color: #F0DB4F;
+    color: black;
+}
+
+.php {
+    background-color: #4F5B93;
+    color: white;
+}
+
+.node {
+    background-color: #54A245;
+    color: white;
+}
+
+.express {
+    background-color: #000000;
+    color: white;
+}
+
+.laravel {
+    background-color: #FF2D20;
+    color: white;
+}
+
+.docker {
+    background-color: #1D63ED;
+    color: white;
+}

@@ -19,6 +19,9 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
         case 'piano':
             var content = PianoContent();
             break;
+        case 'marketplace':
+            var content = MarketplaceContent();
+            break;
     }
 
     modalTitle.textContent = content.title;
@@ -72,5 +75,14 @@ function PianoContent() {
         description: 'Primeiro, esse projeto era apenas um piano virtual que tocava notas conforme as teclas eram pressionadas. Depois, com um conhecimento adquirido sobre APIs, foi implementado a API Gemini para o usuário inserir um prompt que é processado pelo Gemini e resulta em um conjunto de notas que são processadas pelo sistema anterior, automaticamente. Uma versão sem a API Gemini também está disponível e pode ser acessada em <a href="https://luizdevfelipe.github.io/piano/" target="_blank" rel="external">Piano Virtual</a>',
         images: ['files/piano/piano.gif', 'files/piano/piano.png', 'files/piano/piano-site.png'],
         url: 'https://github.com/luizdevfelipe/piano'
+    }
+}
+
+function MarketplaceContent() {
+    return {
+        title: 'Marketplace',
+        description: 'Este foi meu primeiro projeto Backend, comecei em uma versão com Apache, para o servidor, e PHP puro para lidar com a lógica de negócios. Ao conhecer o Laravel, decidi migrar o projeto para ele e, com isso, adicionei novas funcionalidades como autenticação multifator, validação de formulários, envio de e-mails, paginação e visualização de dados com XHR.',
+        images: ['files/marketplace/perfil.gif', 'files/marketplace/email.png', 'files/marketplace/marketplace.gif'],
+        url: 'https://github.com/luizdevfelipe/marketplace'
     }
 }

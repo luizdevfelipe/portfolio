@@ -11,6 +11,15 @@
     }   
 }
 
+@keyframes LinhaPiscando {
+    0% {
+        content: "_";
+    }    
+    50% {
+       content: "";
+    }   
+}
+
 body {
     background-color: aliceblue !important;
 }
@@ -74,6 +83,11 @@ body {
 .header h1 {
     font-size: 5.5em;
     animation: LuzPiscando 6s ease-in-out 0s infinite;
+}
+
+.header h1::after{
+    content: '_';
+    animation: LinhaPiscando 6s ease-in-out 0s infinite;
 }
 
 .header h2 {
