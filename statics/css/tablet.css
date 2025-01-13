@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.header > div {
+    min-width: 330px;
+}
+
+.header h1 {
+    font-size: 3.6em;
+    animation: LuzPiscando 6s ease-in-out 0s infinite;
+}

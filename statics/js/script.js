@@ -1,14 +1,8 @@
 const exampleModal = document.getElementById('exampleModal');
 exampleModal.addEventListener('show.bs.modal', function (event) {
-    // Botão que acionou o modal
     const button = event.relatedTarget;
 
-    // Extrai o valor do atributo data-bs-content
     const projectName = button.getAttribute('data-bs-content');
-
-    console.log(projectName);
-
-    // Obtém os elementos do modal
     const modalTitle = exampleModal.querySelector('.modal-title');
     const modalBody = exampleModal.querySelector('.modal-body');
 
@@ -37,7 +31,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
             Veja no GitHub
         </a>
         <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner" style="height: 300px;">
+            <div class="carousel-inner" id="carrosselImageDiv">
                 <div class="carousel-item active">
                     <img src="${content.images[0]}" class="d-block w-100" alt="..." style="height: 100%;">
                 </div>
