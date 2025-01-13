@@ -7,14 +7,20 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
     const modalBody = exampleModal.querySelector('.modal-body');
 
     switch (projectName) {
-        case 'timberman':
-            var content = TimbermanContent();
+        case 'marketplace':
+            var content = MarketplaceContent();
+            break;
+        case 'calculator':
+            var content = calculatorContent();
             break;
         case 'piano':
             var content = PianoContent();
             break;
-        case 'marketplace':
-            var content = MarketplaceContent();
+        case 'modelo':
+            var content = siteModeloContent();
+            break;
+        case 'timberman':
+            var content = TimbermanContent();
             break;
     }
 
@@ -78,5 +84,23 @@ function MarketplaceContent() {
         description: 'Este foi meu primeiro projeto Backend, comecei em uma versão com Apache, para o servidor, e PHP puro para lidar com a lógica de negócios. Ao conhecer o Laravel, decidi migrar o projeto para ele e, com isso, adicionei novas funcionalidades como autenticação multifator, validação de formulários, envio de e-mails, paginação e visualização de dados com XHR.',
         images: ['files/marketplace/perfil.gif', 'files/marketplace/email.png', 'files/marketplace/marketplace.gif'],
         url: 'https://github.com/luizdevfelipe/marketplace'
+    }
+}
+
+function calculatorContent() {
+    return {
+        title: 'Calculadora do Windows 10',
+        description: 'O projeto de calculadora em JavaScript é famoso por ser um dos primeiros de muitos desenvolvedores, por isso esta escolha. A calculadora foi feita com HTML, CSS e JavaScript, e possui as mesmas funcionalidades da calculadora do Windows 10, como cálculos simples, cálculos com porcentagem, cálculos com raiz quadrada e cálculos com potência. Uma versão funcional pode ser acessada em <a href="https://luizdevfelipe.github.io/calc/" target="_blank" rel="external">Calculadora</a>',
+        images: ['files/calc/memory.gif', 'files/calc/fixed.png', 'files/calc/calc.gif'],
+        url: 'https://github.com/luizdevfelipe/calc'
+    }
+}
+
+function siteModeloContent() {
+    return {
+        title: 'Site Modelo',
+        description: 'Durante meu aprendizado de HTML e CSS decidi fazer esse projeto para consolidar os conceitos e técnicas aprendidos. Ao decorrer do projeto senti a necessidade de buscar por uma solução mais automatizada para a implementação de itens complexos, como o carrossel, por não conhecer JS até então, foi aí que descobir o Bootstrap. Esse projeto está hospedado em <a href="https://luizdevfelipe.github.io/site-modelo/src/" target="_blank" rel="external">Site Modelo</a>',
+        images: ['files/modelo/contato.gif','files/modelo/location.png','files/modelo/home.gif'],
+        url: ' https://github.com/luizdevfelipe/site-modelo'
     }
 }

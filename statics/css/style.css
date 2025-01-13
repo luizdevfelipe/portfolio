@@ -31,6 +31,11 @@ body {
     background-color: aliceblue !important;
 }
 
+p {
+    text-align: justify;
+    text-indent: 20px;
+}
+
 .nav-sticky {
     position: sticky;
     top: 0;
@@ -163,8 +168,6 @@ body {
     background-color: #ffffff;
     border-radius: 0px 5px 5px 5px;
     box-shadow: 4px 4px 6px 0px #00000021;
-    text-align: justify;
-    text-indent: 20px;
 }
 
 .upper-text {
