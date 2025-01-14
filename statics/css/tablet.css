@@ -8,3 +8,11 @@
     font-size: 3.6em;
     animation: LuzPiscando 6s ease-in-out 0s infinite;
 }
+
+.sobre {
+    max-width: 400px;
+}
+
+.projetos {
+    max-width: 400px;
+}
