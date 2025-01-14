@@ -64,7 +64,7 @@ function TimbermanContent() {
     return {
         title: 'Timberman-on-Arduino',
         description: 'Esse foi um projeto realizado para a disciplina de Microprocessadores e Microcontroladores, onde foi utilizada a plataforma microcontrolada do Arduino para fazer a recriação do jogo virual <a href="https://store.steampowered.com/app/398710/Timberman/"target="_blank" rel="external">Timberman</a> onde o objetivo principal é quebrar o máximo de troncos possíveis sem ser atingido por eles.',
-        images: ['files/timberman/schema.png', 'files/timberman/projeto.png', 'files/timberman/timberman.gif'],
+        images: ['files/timberman/schema.jpg', 'files/timberman/projeto.jpg', 'files/timberman/timberman.gif'],
         url: 'https://github.com/luizdevfelipe/timberman-on-arduino'
     }
 }
@@ -91,7 +91,7 @@ function calculatorContent() {
     return {
         title: 'Calculadora do Windows 10',
         description: 'O projeto de calculadora em JavaScript é famoso por ser um dos primeiros de muitos desenvolvedores, por isso esta escolha. A calculadora foi feita com HTML, CSS e JavaScript, e possui as mesmas funcionalidades da calculadora do Windows 10, como cálculos simples, cálculos com porcentagem, cálculos com raiz quadrada e cálculos com potência. Uma versão funcional pode ser acessada em <a href="https://luizdevfelipe.github.io/calc/" target="_blank" rel="external">Calculadora</a>',
-        images: ['files/calc/memory.gif', 'files/calc/fixed.png', 'files/calc/calc.gif'],
+        images: ['files/calc/memory.gif', 'files/calc/fixed.jpg', 'files/calc/calc.gif'],
         url: 'https://github.com/luizdevfelipe/calc'
     }
 }
@@ -100,7 +100,7 @@ function siteModeloContent() {
     return {
         title: 'Site Modelo',
         description: 'Durante meu aprendizado de HTML e CSS decidi fazer esse projeto para consolidar os conceitos e técnicas aprendidos. Ao decorrer do projeto senti a necessidade de buscar por uma solução mais automatizada para a implementação de itens complexos, como o carrossel, por não conhecer JS até então, foi aí que descobir o Bootstrap. Esse projeto está hospedado em <a href="https://luizdevfelipe.github.io/site-modelo/src/" target="_blank" rel="external">Site Modelo</a>',
-        images: ['files/modelo/contato.gif', 'files/modelo/location.png', 'files/modelo/home.gif'],
+        images: ['files/modelo/contato.gif', 'files/modelo/location.jpg', 'files/modelo/home.gif'],
         url: ' https://github.com/luizdevfelipe/site-modelo'
     }
 }
