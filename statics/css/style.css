@@ -36,6 +36,16 @@ p {
     text-indent: 20px;
 }
 
+.hidden {
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+.hidden-off {
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
 .nav-sticky {
     position: sticky;
     top: 0;

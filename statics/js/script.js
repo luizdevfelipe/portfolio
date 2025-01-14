@@ -100,7 +100,24 @@ function siteModeloContent() {
     return {
         title: 'Site Modelo',
         description: 'Durante meu aprendizado de HTML e CSS decidi fazer esse projeto para consolidar os conceitos e técnicas aprendidos. Ao decorrer do projeto senti a necessidade de buscar por uma solução mais automatizada para a implementação de itens complexos, como o carrossel, por não conhecer JS até então, foi aí que descobir o Bootstrap. Esse projeto está hospedado em <a href="https://luizdevfelipe.github.io/site-modelo/src/" target="_blank" rel="external">Site Modelo</a>',
-        images: ['files/modelo/contato.gif','files/modelo/location.png','files/modelo/home.gif'],
+        images: ['files/modelo/contato.gif', 'files/modelo/location.png', 'files/modelo/home.gif'],
         url: ' https://github.com/luizdevfelipe/site-modelo'
     }
 }
+
+const observer = new IntersectionObserver((entries) => {
+    Array.from(entries).forEach(entry => {
+        if (entry.intersectionRatio >= .8) {
+            entry.target.classList.add('hidden-off');
+        } else {
+            entry.target.classList.remove('hidden-off');
+        }
+    });
+}, 
+{
+    threshold: .8
+});
+
+Array.from(document.querySelectorAll('.hidden')).forEach((element) => {
+    observer.observe(element);
+});
