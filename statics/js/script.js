@@ -63,7 +63,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 function TimbermanContent() {
     return {
         title: 'Timberman-on-Arduino',
-        description: 'Esse foi um projeto realizado para a disciplina de Microprocessadores e Microcontroladores, onde foi utilizada a plataforma microcontrolada do Arduino para fazer a recriação do jogo virual <a href="https://store.steampowered.com/app/398710/Timberman/"target="_blank" rel="external">Timberman</a> onde o objetivo principal é quebrar o máximo de troncos possíveis sem ser atingido por eles.',
+        description: 'Esse foi um projeto realizado para a disciplina de Microprocessadores e Microcontroladores em modelo de artigo científico, onde foi utilizada a plataforma microcontrolada Arduino para comandar dispositivos periféricos responsáveis pela captação de entradas e exibição de saídas com o intuito de fazer uma recriação do jogo virtual <a href="https://store.steampowered.com/app/398710/Timberman/"target="_blank" rel="external">Timberman</a>. Nele o objetivo principal é quebrar o máximo de troncos possíveis sem ser atingido por eles.',
         images: ['files/timberman/schema.jpg', 'files/timberman/projeto.jpg', 'files/timberman/timberman.gif'],
         url: 'https://github.com/luizdevfelipe/timberman-on-arduino'
     }
@@ -72,7 +72,7 @@ function TimbermanContent() {
 function PianoContent() {
     return {
         title: 'Piano virtual com Gemini API',
-        description: 'Primeiro, esse projeto era apenas um piano virtual que tocava notas conforme as teclas eram pressionadas. Depois, com um conhecimento adquirido sobre APIs, foi implementado a API Gemini para o usuário inserir um prompt que é processado pelo Gemini e resulta em um conjunto de notas que são processadas pelo sistema anterior, automaticamente. Uma versão sem a API Gemini também está disponível e pode ser acessada em <a href="https://luizdevfelipe.github.io/piano/" target="_blank" rel="external">Piano Virtual</a>',
+        description: 'Primeiro, esse projeto era apenas um piano virtual que tocava notas conforme as teclas eram pressionadas. Depois, com um conhecimento adquirido sobre APIs, foi implementado a API Gemini, uma IA, para o usuário inserir um prompt, instrução, que é processado pelo Gemini resultando em um conjunto de notas que são processadas pelo sistema do piano, automaticamente. Uma versão sem a API Gemini também está disponível e pode ser acessada em <a href="https://luizdevfelipe.github.io/piano/" target="_blank" rel="external">Piano Virtual</a>',
         images: ['files/piano/piano.gif', 'files/piano/piano.png', 'files/piano/piano-site.png'],
         url: 'https://github.com/luizdevfelipe/piano'
     }
@@ -81,7 +81,7 @@ function PianoContent() {
 function MarketplaceContent() {
     return {
         title: 'Marketplace',
-        description: 'Este foi meu primeiro projeto Backend, comecei em uma versão com Apache, para o servidor, e PHP puro para lidar com a lógica de negócios. Ao conhecer o Laravel, decidi migrar o projeto para ele e, com isso, adicionei novas funcionalidades como autenticação multifator, validação de formulários, envio de e-mails, paginação e visualização de dados com XHR.',
+        description: 'Este foi o meu primeiro projeto de desenvolvimento Backend, inicialmente implementado utilizando o servidor Apache e PHP puro para a manipulação da lógica de negócios. Com o avanço no aprendizado sobre o framework Laravel, o projeto foi migrado para essa tecnologia, permitindo a adição de novas funcionalidades, como autenticação multifator, validação de formulários, envio de e-mails, paginação e visualização de dados com requisições XHR.',
         images: ['files/marketplace/perfil.gif', 'files/marketplace/email.png', 'files/marketplace/marketplace.gif'],
         url: 'https://github.com/luizdevfelipe/marketplace'
     }
@@ -90,7 +90,7 @@ function MarketplaceContent() {
 function calculatorContent() {
     return {
         title: 'Calculadora do Windows 10',
-        description: 'O projeto de calculadora em JavaScript é famoso por ser um dos primeiros de muitos desenvolvedores, por isso esta escolha. A calculadora foi feita com HTML, CSS e JavaScript, e possui as mesmas funcionalidades da calculadora do Windows 10, como cálculos simples, cálculos com porcentagem, cálculos com raiz quadrada e cálculos com potência. Uma versão funcional pode ser acessada em <a href="https://luizdevfelipe.github.io/calc/" target="_blank" rel="external">Calculadora</a>',
+        description: 'O projeto de calculadora em JavaScript é famoso por ser um dos primeiros de muitos desenvolvedores, por isso esta escolha. A calculadora foi feita com HTML, CSS e JavaScript, e possui as mesmas funcionalidades da calculadora do Windows 10, como cálculos simples, cálculos com porcentagem, com raiz quadrada e potência. Uma versão funcional pode ser acessada em <a href="https://luizdevfelipe.github.io/calc/" target="_blank" rel="external">Calculadora</a>',
         images: ['files/calc/memory.gif', 'files/calc/fixed.jpg', 'files/calc/calc.gif'],
         url: 'https://github.com/luizdevfelipe/calc'
     }
@@ -99,7 +99,7 @@ function calculatorContent() {
 function siteModeloContent() {
     return {
         title: 'Site Modelo',
-        description: 'Durante meu aprendizado de HTML e CSS decidi fazer esse projeto para consolidar os conceitos e técnicas aprendidos. Ao decorrer do projeto senti a necessidade de buscar por uma solução mais automatizada para a implementação de itens complexos, como o carrossel, por não conhecer JS até então, foi aí que descobir o Bootstrap. Esse projeto está hospedado em <a href="https://luizdevfelipe.github.io/site-modelo/src/" target="_blank" rel="external">Site Modelo</a>',
+        description: 'Com a ideia de praticar alguns conceitos e técnicas aprendidos em HTML e CSS, esse projeto foi desenvolvido. Ao decorrer do desenvolvimento do projeto houve a necessidade de buscar por uma solução mais automatizada para a implementação de itens complexos, como o carrossel, por não conhecer JS até então o Bootstrap foi escolhido para complementar o projeto. Esse projeto está hospedado em <a href="https://luizdevfelipe.github.io/site-modelo/src/" target="_blank" rel="external">Site Modelo</a>',
         images: ['files/modelo/contato.gif', 'files/modelo/location.jpg', 'files/modelo/home.gif'],
         url: ' https://github.com/luizdevfelipe/site-modelo'
     }
