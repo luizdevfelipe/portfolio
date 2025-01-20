@@ -80,8 +80,8 @@ function PianoContent() {
 
 function MarketplaceContent() {
     return {
-        title: 'Marketplace',
-        description: 'Este foi o meu primeiro projeto de desenvolvimento Backend, inicialmente implementado utilizando o servidor Apache e PHP puro para a manipulação da lógica de negócios. Com o avanço no aprendizado sobre o framework Laravel, o projeto foi migrado para essa tecnologia, permitindo a adição de novas funcionalidades, como autenticação multifator, validação de formulários, envio de e-mails, paginação e visualização de dados com requisições XHR.',
+        title: 'Marketplace com Mercado Pago',
+        description: 'Este foi o meu primeiro projeto de desenvolvimento Backend, inicialmente implementado utilizando o servidor Apache e PHP puro para a manipulação da lógica de negócios. Com o avanço no aprendizado sobre o framework Laravel, o projeto foi migrado para essa tecnologia, permitindo a adição de novas funcionalidades, como autenticação multifator, validação de formulários, envio de e-mails, paginação e visualização de dados com requisições XHR, agendamento de tarefas e integração com a API do Mercado Pago.',
         images: ['files/marketplace/perfil.gif', 'files/marketplace/email.png', 'files/marketplace/marketplace.gif'],
         url: 'https://github.com/luizdevfelipe/marketplace'
     }
