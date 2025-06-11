@@ -1,31 +1,34 @@
-const exampleModal = document.getElementById('exampleModal');
-exampleModal.addEventListener('show.bs.modal', function (event) {
-    const button = event.relatedTarget;
 
-    const projectName = button.getAttribute('data-bs-content');
-    const modalTitle = exampleModal.querySelector('.modal-title');
-    const modalBody = exampleModal.querySelector('.modal-body');
 
-    switch (projectName) {
-        case 'marketplace':
-            var content = MarketplaceContent();
-            break;
-        case 'calculator':
-            var content = calculatorContent();
-            break;
-        case 'piano':
-            var content = PianoContent();
-            break;
-        case 'modelo':
-            var content = siteModeloContent();
-            break;
-        case 'timberman':
-            var content = TimbermanContent();
-            break;
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    const exampleModal = document.getElementById('exampleModal');
+    exampleModal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
 
-    modalTitle.textContent = content.title;
-    modalBody.innerHTML = `
+        const projectName = button.getAttribute('data-bs-content');
+        const modalTitle = exampleModal.querySelector('.modal-title');
+        const modalBody = exampleModal.querySelector('.modal-body');
+
+        switch (projectName) {
+            case 'marketplace':
+                var content = MarketplaceContent();
+                break;
+            case 'calculator':
+                var content = calculatorContent();
+                break;
+            case 'piano':
+                var content = PianoContent();
+                break;
+            case 'modelo':
+                var content = siteModeloContent();
+                break;
+            case 'timberman':
+                var content = TimbermanContent();
+                break;
+        }
+
+        modalTitle.textContent = content.title;
+        modalBody.innerHTML = `
         <p>${content.description}</p>
         <a href="${content.url}" target="_blank" rel="external" style="display: flex; align-items: center; margin-bottom: 10px; max-width: 160px;">
             <svg height="24" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="24"
@@ -58,6 +61,12 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
             </button>
         </div>
     `;
+    });
+
+    document.querySelector("a#contactMail").addEventListener('click', (e) => {
+        navigator.clipboard.writeText('luizdevfelipe@gmail.com');
+        alert('E-mail copiado para a área de transferência!');
+    });
 });
 
 function TimbermanContent() {
@@ -113,10 +122,10 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.remove('hidden-off');
         }
     });
-}, 
-{
-    threshold: .8
-});
+},
+    {
+        threshold: .8
+    });
 
 Array.from(document.querySelectorAll('.hidden')).forEach((element) => {
     observer.observe(element);
