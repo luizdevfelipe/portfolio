@@ -67,6 +67,23 @@ document.addEventListener('DOMContentLoaded', () => {
         navigator.clipboard.writeText('luizdevfelipe@gmail.com');
         alert('E-mail copiado para a área de transferência!');
     });
+
+    window.onresize = function () {
+        if (window.innerWidth < 820 && !document.querySelector("button#menuBurguer")) {
+            document.querySelectorAll("li a.linkMenu").forEach(function (link) {
+                link.style = "display: none;";
+            })
+
+            menu = document.querySelector("ul.menu");
+            menu.innerHTML += ("<button class='linkMenu' id='menuBurguer' style='display: block;'><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z'/></svg></button>");
+        } else if (window.innerWidth >= 820) {
+            document.querySelectorAll("li a.linkMenu").forEach(function (link) {
+                link.style += "display: block;";
+            })
+            document.querySelector("button#menuBurguer")?.remove();
+        }
+    };
+
 });
 
 function TimbermanContent() {
