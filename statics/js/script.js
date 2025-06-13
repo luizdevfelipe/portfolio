@@ -1,6 +1,8 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    burgerMenu();
+
     const exampleModal = document.getElementById('exampleModal');
     exampleModal.addEventListener('show.bs.modal', function (event) {
         const button = event.relatedTarget;
@@ -69,21 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.onresize = function () {
-        if (window.innerWidth < 820 && !document.querySelector("button#menuBurguer")) {
-            document.querySelectorAll("li a.linkMenu").forEach(function (link) {
-                link.style = "display: none;";
-            })
-
-            menu = document.querySelector("ul.menu");
-            menu.innerHTML += ("<button class='linkMenu' id='menuBurguer' style='display: block;'><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z'/></svg></button>");
-        } else if (window.innerWidth >= 820) {
-            document.querySelectorAll("li a.linkMenu").forEach(function (link) {
-                link.style += "display: block;";
-            })
-            document.querySelector("button#menuBurguer")?.remove();
-        }
+        burgerMenu()
     };
-
 });
 
 function TimbermanContent() {
@@ -147,3 +136,27 @@ const observer = new IntersectionObserver((entries) => {
 Array.from(document.querySelectorAll('.hidden')).forEach((element) => {
     observer.observe(element);
 });
+
+function burgerMenu() {
+    if (window.innerWidth < 820 && !document.querySelector("button#menuBurguer")) {
+        document.querySelectorAll("li a.linkMenu").forEach(function (link) {
+            link.style = "display: none;";
+        })
+        menu = document.querySelector("ul.menu");
+        menu.innerHTML += ("<button class='linkMenu' id='menuBurguer' style='display: block;'><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z'/></svg></button>");
+        document.querySelector("button#menuBurguer").addEventListener('click', function () {
+            document.querySelectorAll("li a.linkMenu").forEach(function (link) {
+                if (link.style.display === "block") {
+                    link.style.display = "none";
+                } else {
+                    link.style.display = "block";
+                }
+            });
+        });
+    } else if (window.innerWidth >= 820) {
+        document.querySelectorAll("li a.linkMenu").forEach(function (link) {
+            link.style += "display: block;";
+        })
+        document.querySelector("button#menuBurguer")?.remove();
+    }
+}
