@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     burgerMenu();
 
@@ -23,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case 'modelo':
                 var content = siteModeloContent();
+                break;
+            case 'earth-defensor':
+                var content = EarthDefensorContent();
                 break;
             case 'timberman':
                 var content = TimbermanContent();
@@ -65,15 +66,19 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     });
 
-    document.querySelector("a#contactMail").addEventListener('click', (e) => {
-        navigator.clipboard.writeText('luizdevfelipe@gmail.com');
-        alert('E-mail copiado para a área de transferência!');
-    });
-
     window.onresize = function () {
         burgerMenu()
     };
 });
+
+function EarthDefensorContent() {
+    return {
+        title: 'Earth Defensor',
+        description: 'Earth Defensor insere o jogador em um cenário onde a Terra será atingida por meteoroides e seu objetivo é protejê-la através do controle da Lua. Nosso satélite natural servirá como escudo, colidindo e destruindo os inimigos antes que cheguem a Terra. Além de controlar a Lua o jogador dispôem de potencializadores que influenciam as métricas do jogo, auxiliando-o no decorres das rodadas. Cada rodada apresenta mais dificuldades, o objetivo do jogador torna-se alcançar uma rodada nunca antes jogada, ultrapassando seus limites.',
+        images: ['files/earth-defensor/damage.gif', 'files/earth-defensor/menu.jpg', 'files/earth-defensor/start-game.jpg'],
+        url: 'https://github.com/luizdevfelipe/earth-defensor'
+    }
+}
 
 function TimbermanContent() {
     return {
@@ -159,4 +164,9 @@ function burgerMenu() {
         })
         document.querySelector("button#menuBurguer")?.remove();
     }
+}
+
+function copyEmail () {
+    navigator.clipboard.writeText('luizdevfelipe@gmail.com');
+    alert('E-mail copiado para a área de transferência!');
 }
