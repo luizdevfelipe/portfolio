@@ -1,10 +1,6 @@
 @charset "UTF-8";
 
 .tags {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
     display: flex;
     flex-flow: row wrap;
     gap: 0.5em;

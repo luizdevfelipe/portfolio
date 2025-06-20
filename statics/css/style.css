@@ -216,10 +216,11 @@ p {
 }
 
 .projetos-section {
-    position: relative;
+    display: grid;
+    grid-template: 35px 230px 130px 30px 100px / 1fr;
+    gap: 10px;
     cursor: pointer;
     width: 350px;
-    min-height: 470px;
     padding: 10px;
     background-color: #ffffff;
     border-radius: 5px;
@@ -237,3 +238,11 @@ p {
 #carrosselImageDiv {
     height: 280px;
 }
+
+.btn-saiba-mais {
+    border-radius: 5px;
+    padding: 2px;
+}
+
+/* refatorar sistema botão de saiba mais e posicionamento das tags
+possivelmente usar grid para alinhar no fim do container projetos-section */
