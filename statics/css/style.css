@@ -217,7 +217,7 @@ p {
 
 .projetos-section {
     display: grid;
-    grid-template: 35px 230px 130px 30px 100px / 1fr;
+    grid-template: 35px 230px 120px 40px 1fr / 1fr;
     gap: 10px;
     cursor: pointer;
     width: 350px;
@@ -241,8 +241,16 @@ p {
 
 .btn-saiba-mais {
     border-radius: 5px;
-    padding: 2px;
+    padding: 5px;
+    justify-self: center;
+    box-shadow: 1px 1px 3px 0px #00000062;
+    text-shadow: 0px 0px 1px white;
+    transition: transform 0.5s ease-out, background-color 0.5s ease-out, color 0.2s ease-out, box-shadow 0.5s ease-out;
 }
 
-/* refatorar sistema botão de saiba mais e posicionamento das tags
-possivelmente usar grid para alinhar no fim do container projetos-section */
+.btn-saiba-mais:hover {
+    background-color: #a0a0a0;
+    color: white;
+    transform: scale(1.03, 1.03);
+    box-shadow: 2px 2px 3px 2px #00000062;
+}
