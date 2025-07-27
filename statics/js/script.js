@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function EarthDefensorContent() {
     return {
         title: 'Earth Defensor',
-        description: 'Earth Defensor insere o jogador em um cenário onde a Terra será atingida por meteoroides e seu objetivo é protejê-la através do controle da Lua. Nosso satélite natural servirá como escudo, colidindo e destruindo os inimigos antes que cheguem a Terra. Além de controlar a Lua o jogador dispôem de potencializadores que influenciam as métricas do jogo, auxiliando-o no decorres das rodadas. Cada rodada apresenta mais dificuldades, o objetivo do jogador torna-se alcançar uma rodada nunca antes jogada, ultrapassando seus limites.',
+        description: 'Earth Defensor insere o jogador em um cenário onde a Terra será atingida por meteoróides e seu objetivo é protegê-la através do controle da Lua. Nosso satélite natural servirá como escudo, colidindo e destruindo os inimigos antes que cheguem à Terra. Além de controlar a Lua, o jogador dispõe de potencializadores que influenciam as métricas do jogo, auxiliando-o no decorrer das rodadas. Cada rodada apresenta mais dificuldades, o objetivo do jogador torna-se alcançar uma rodada nunca antes jogada, ultrapassando seus limites.',
         images: ['files/earth-defensor/damage.gif', 'files/earth-defensor/menu.jpg', 'files/earth-defensor/start-game.jpg'],
         url: 'https://github.com/luizdevfelipe/earth-defensor'
     }
@@ -83,7 +83,7 @@ function EarthDefensorContent() {
 function TimbermanContent() {
     return {
         title: 'Timberman-on-Arduino',
-        description: 'Esse foi um projeto realizado para a disciplina de Microprocessadores e Microcontroladores em modelo de artigo científico, onde foi utilizada a plataforma microcontrolada Arduino para comandar dispositivos periféricos responsáveis pela captação de entradas e exibição de saídas com o intuito de fazer uma recriação do jogo virtual <a href="https://store.steampowered.com/app/398710/Timberman/"target="_blank" rel="external">Timberman</a>. Nele o objetivo principal é quebrar o máximo de troncos possíveis sem ser atingido por eles.',
+        description: 'Esse foi um projeto realizado para a disciplina de Microprocessadores e Microcontroladores em modelo de artigo científico, onde foi utilizada a plataforma microcontrolada Arduino para comandar dispositivos periféricos responsáveis pela captação de entradas e exibição de saídas com o intuito de fazer uma recriação do jogo virtual <a href="https://store.steampowered.com/app/398710/Timberman/"target="_blank" rel="external">Timberman</a>. Nele, o objetivo principal é quebrar o máximo de troncos possíveis sem ser atingido por eles.',
         images: ['files/timberman/schema.jpg', 'files/timberman/projeto.jpg', 'files/timberman/timberman.gif'],
         url: 'https://github.com/luizdevfelipe/timberman-on-arduino'
     }
@@ -92,7 +92,7 @@ function TimbermanContent() {
 function PianoContent() {
     return {
         title: 'Piano virtual com Gemini API',
-        description: 'Primeiro, esse projeto era apenas um piano virtual que tocava notas conforme as teclas eram pressionadas. Depois, com um conhecimento adquirido sobre APIs, foi implementado a API Gemini, uma IA, para o usuário inserir um prompt, instrução, que é processado pelo Gemini resultando em um conjunto de notas que são processadas pelo sistema do piano, automaticamente. Uma versão sem a API Gemini também está disponível e pode ser acessada em <a href="https://luizdevfelipe.github.io/piano/" target="_blank" rel="external">Piano Virtual</a>',
+        description: 'Primeiro, esse projeto era apenas um piano virtual que tocava notas conforme as teclas eram pressionadas. Depois, com o conhecimento adquirido sobre APIs, foi implementada a API Gemini, uma IA, para o usuário inserir um prompt, instrução, que é processado pelo Gemini resultando em um conjunto de notas que são processadas pelo sistema do piano, automaticamente. Uma versão sem a API Gemini também está disponível e pode ser acessada em <a href="https://luizdevfelipe.github.io/piano/" target="_blank" rel="external">Piano Virtual</a>.',
         images: ['files/piano/piano.gif', 'files/piano/piano.png', 'files/piano/piano-site.png'],
         url: 'https://github.com/luizdevfelipe/piano'
     }
@@ -110,7 +110,7 @@ function MarketplaceContent() {
 function calculatorContent() {
     return {
         title: 'Calculadora do Windows 10',
-        description: 'O projeto de calculadora em JavaScript é famoso por ser um dos primeiros de muitos desenvolvedores, por isso esta escolha. A calculadora foi feita com HTML, CSS e JavaScript, e possui as mesmas funcionalidades da calculadora do Windows 10, como cálculos simples, cálculos com porcentagem, com raiz quadrada e potência. Uma versão funcional pode ser acessada em <a href="https://luizdevfelipe.github.io/calc/" target="_blank" rel="external">Calculadora</a>',
+        description: 'O projeto de calculadora em JavaScript é famoso por ser um dos primeiros de muitos desenvolvedores, por isso esta escolha. A calculadora foi feita com HTML, CSS e JavaScript, e possui as mesmas funcionalidades da calculadora do Windows 10, como cálculos simples, cálculos com porcentagem, com raiz quadrada e potência. Uma versão funcional pode ser acessada em <a href="https://luizdevfelipe.github.io/calc/" target="_blank" rel="external">Calculadora</a>.',
         images: ['files/calc/memory.gif', 'files/calc/fixed.jpg', 'files/calc/calc.gif'],
         url: 'https://github.com/luizdevfelipe/calc'
     }
@@ -119,9 +119,9 @@ function calculatorContent() {
 function siteModeloContent() {
     return {
         title: 'Site Modelo',
-        description: 'Com a ideia de praticar alguns conceitos e técnicas aprendidos em HTML e CSS, esse projeto foi desenvolvido. Ao decorrer do desenvolvimento do projeto houve a necessidade de buscar por uma solução mais automatizada para a implementação de itens complexos, como o carrossel, por não conhecer JS até então o Bootstrap foi escolhido para complementar o projeto. Esse projeto está hospedado em <a href="https://luizdevfelipe.github.io/site-modelo/src/" target="_blank" rel="external">Site Modelo</a>',
+        description: 'Com a ideia de praticar alguns conceitos e técnicas aprendidos em HTML e CSS, esse projeto foi desenvolvido. Ao decorrer do desenvolvimento do projeto houve a necessidade de buscar por uma solução mais automatizada para a implementação de itens complexos, como o carrossel, por não conhecer JS até então o Bootstrap foi escolhido para complementar o projeto. Esse projeto está hospedado em <a href="https://luizdevfelipe.github.io/site-modelo/src/" target="_blank" rel="external">Site Modelo</a>.',
         images: ['files/modelo/contato.gif', 'files/modelo/location.jpg', 'files/modelo/home.gif'],
-        url: ' https://github.com/luizdevfelipe/site-modelo'
+        url: 'https://github.com/luizdevfelipe/site-modelo'
     }
 }
 
