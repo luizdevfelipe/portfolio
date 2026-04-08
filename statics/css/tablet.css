@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+.nav-sticky__bar {
+    padding-left: 0.65rem;
+    padding-right: 0.65rem;
+}
+
+.linkMenu--nav {
+    font-size: 0.82rem;
+    padding: 0.3rem 0.55rem;
+}
+
 .header > div {
     min-width: 330px;
 }

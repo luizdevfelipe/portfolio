@@ -1,88 +1,113 @@
 @charset "UTF-8";
 
-.tags {
+.projetos-section .tags {
     display: flex;
     flex-flow: row wrap;
-    gap: 0.5em;
-    justify-content: center;
+    gap: 0.35rem;
+    justify-content: flex-start;
     align-items: center;
-    padding: 6px;
-    background-color: #bebebe46;
-    box-shadow: 0px 1px 6px 0px #00000033;
-    align-self: end;
+    align-self: stretch;
+    margin-top: auto;
+    padding: 0.5rem 0.55rem;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius-sm, 6px);
+    box-shadow: none;
 }
 
-.tag {
-    border-radius: 5px;
-    padding: 4px;
-    box-shadow: 2px 2px 2px 0px #7e7e7e;
+.projetos-section .tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.45rem;
+    border-radius: var(--radius-tag, 4px);
+    border: 1px solid transparent;
+    box-shadow: none;
+    line-height: 1.2;
 }
 
-.arduino {
-    background-color: #008184;
-    color: white;
+.projetos-section .tag.arduino {
+    background: rgba(0, 129, 132, 0.12);
+    color: #006064;
+    border-color: rgba(0, 129, 132, 0.35);
 }
 
-.cpp {
-    background-color: #F34B7D;
-    color: white;
+.projetos-section .tag.cpp {
+    background: rgba(243, 75, 125, 0.12);
+    color: #9d174d;
+    border-color: rgba(243, 75, 125, 0.35);
 }
 
-.css {
-    background-color: #663399;
-    color: white;
+.projetos-section .tag.css {
+    background: rgba(102, 51, 153, 0.12);
+    color: #5b21b6;
+    border-color: rgba(102, 51, 153, 0.35);
 }
 
-.bootstrap {
-    background-color: #6E2CF3;
-    color: white;
+.projetos-section .tag.bootstrap {
+    background: rgba(110, 44, 243, 0.1);
+    color: #5b21b6;
+    border-color: rgba(110, 44, 243, 0.3);
 }
 
-.html {
-    background-color: #E34C26;
-    color: white;
+.projetos-section .tag.html {
+    background: rgba(227, 76, 38, 0.12);
+    color: #9a3412;
+    border-color: rgba(227, 76, 38, 0.35);
 }
 
-.js {
-    background-color: #F0DB4F;
-    color: black;
+.projetos-section .tag.js {
+    background: rgba(240, 219, 79, 0.35);
+    color: #713f12;
+    border-color: rgba(180, 150, 20, 0.45);
 }
 
-.php {
-    background-color: #4F5B93;
-    color: white;
+.projetos-section .tag.php {
+    background: rgba(79, 91, 147, 0.14);
+    color: #3730a3;
+    border-color: rgba(79, 91, 147, 0.35);
 }
 
-.mysql {
-    background-color: #3E6E93;
-    color: white;
+.projetos-section .tag.mysql {
+    background: rgba(62, 110, 147, 0.14);
+    color: #1e4976;
+    border-color: rgba(62, 110, 147, 0.35);
 }
 
-.node {
-    background-color: #54A245;
-    color: white;
+.projetos-section .tag.node {
+    background: rgba(84, 162, 69, 0.14);
+    color: #166534;
+    border-color: rgba(84, 162, 69, 0.35);
 }
 
-.express {
-    background-color: #000000;
-    color: white;
+.projetos-section .tag.express {
+    background: rgba(15, 23, 42, 0.08);
+    color: #0f172a;
+    border-color: rgba(15, 23, 42, 0.2);
 }
 
-.laravel {
-    background-color: #FF2D20;
-    color: white;
+.projetos-section .tag.laravel {
+    background: rgba(255, 45, 32, 0.1);
+    color: #b91c1c;
+    border-color: rgba(255, 45, 32, 0.35);
 }
 
-.docker {
-    background-color: #1D63ED;
-    color: white;
+.projetos-section .tag.docker {
+    background: rgba(29, 99, 237, 0.1);
+    color: #1d4ed8;
+    border-color: rgba(29, 99, 237, 0.35);
 }
 
-.lua {
-    background-color: #02017D;
-    color: white;
+.projetos-section .tag.lua {
+    background: rgba(2, 1, 125, 0.1);
+    color: #1e1b4b;
+    border-color: rgba(2, 1, 125, 0.28);
 }
-.love2d {
-    background-color: #EA316E;
-    color: white;
+
+.projetos-section .tag.love2d {
+    background: rgba(234, 49, 110, 0.1);
+    color: #9d174d;
+    border-color: rgba(234, 49, 110, 0.35);
 }

@@ -6,29 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>luizdevfelipe</title>
     <link rel="shortcut icon" href="files/favicon/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="statics/css/style.css">
     <link rel="stylesheet" href="statics/css/tags.css">
     <link rel="stylesheet" href="statics/css/window.css" media="screen and (max-width: 1200px)">
     <link rel="stylesheet" href="statics/css/tablet.css" media="screen and (max-width: 550px)">
     <link rel="stylesheet" href="statics/css/mobile.css" media="screen and (max-width: 490px)">
-    <script src="statics/js/script.js" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="statics/js/script.js" defer></script>
 </head>
 
 <body>
-    <nav class="nav-sticky">
+    <nav class="nav-sticky" aria-label="Navegação principal">
+        <div class="nav-sticky__bar">
         <ul class="menu">
-            <li><a href="#" class="linkMenu">Home</a></li>
-            <li><a href="#sobre" class="linkMenu">Sobre</a></li>
-            <li><a href="#projetos" class="linkMenu">Projetos</a></li>
+            <li><a href="#home" class="linkMenu linkMenu--nav">Home</a></li>
+            <li><a href="#sobre" class="linkMenu linkMenu--nav">Sobre</a></li>
+            <li><a href="#projetos" class="linkMenu linkMenu--nav">Projetos</a></li>
 
             <li class="right">
-                <a href="https://github.com/luizdevfelipe" target="_blank" rel="external" class="linkMenu">
-                    <svg height="32" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="32"
+                <a href="https://github.com/luizdevfelipe" target="_blank" rel="noopener noreferrer" class="linkMenu linkMenu--icon" aria-label="GitHub">
+                    <svg height="22" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="22"
                         data-view-component="true">
                         <path
                             d="M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z">
@@ -38,8 +39,8 @@
             </li>
             <li>
                 <a href="https://www.linkedin.com/in/luizdevfelipe/" target="_blank"
-                    rel="external" class="linkMenu">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 48 48">
+                    rel="noopener noreferrer" class="linkMenu linkMenu--icon" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 48 48">
                         <path fill="#0288D1"
                             d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z">
                         </path>
@@ -50,8 +51,8 @@
                 </a>
             </li>
             <li>
-                <a href="mailto:luizdevfelipe@gmail.com" class="linkMenu" id="contactMail" onclick="copyEmail()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="52 42 88 66">
+                <a href="mailto:luizdevfelipe@gmail.com" class="linkMenu linkMenu--icon" id="contactMail" onclick="copyEmail()" aria-label="Copiar e-mail">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="52 42 88 66">
                         <path fill="#4285f4" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6" />
                         <path fill="#34a853" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15" />
                         <path fill="#fbbc04" d="M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2" />
@@ -61,6 +62,7 @@
                 </a>
             </li>
         </ul>
+        </div>
     </nav>
 
     <header class="header" id="home">
@@ -73,121 +75,158 @@
     <main class="main">
 
         <section class="sobre" id="sobre">
-            <h2>Sobre</h2>
+            <h2 class="section-title section-title--inline">Sobre</h2>
             <div class="container-sobre">
-                <div class="hidden">
-                    <h3 class="fs-5 upper-text">Sobre mim</h3>
-                    <section class="sobre-section">
-                        <p>Olá! Meu nome é Luiz Felipe de Almeida Fávaro e sou desenvolvedor web com foco em Back-End.
+                <article class="sobre-card hidden">
+                    <div class="sobre-card__head">
+                        <span class="sobre-card__icon" aria-hidden="true">◆</span>
+                        <h3>Sobre mim</h3>
+                    </div>
+                    <div class="sobre-section">
+                        <p>Olá! Meu nome é Luiz Felipe de Almeida Fávaro e sou desenvolvedor web com foco em back-end.
                             Minha trajetória na programação começou com o domínio das bases — HTML, CSS e JavaScript —
                             e, desde então, venho me aprofundando no desenvolvimento de aplicações web completas,
                             compreendendo tanto a lógica de negócio quanto a arquitetura por trás de sistemas modernos.
                         </p>
-                    </section>
-                </div>
-                <div class="hidden">
-                    <h3 class="fs-5 upper-text">Formação</h3>
-                    <section class="sobre-section">
+                    </div>
+                </article>
+                <article class="sobre-card hidden">
+                    <div class="sobre-card__head">
+                        <span class="sobre-card__icon" aria-hidden="true">◇</span>
+                        <h3>Formação</h3>
+                    </div>
+                    <div class="sobre-section">
                         <p>Sou estudante de Engenharia de Computação, onde tenho contato direto com fundamentos sólidos
                             da computação, arquitetura de sistemas e desenvolvimento de software. A graduação também tem
                             contribuído com uma base analítica forte por meio de disciplinas como cálculo, estatística e
                             física, o que amplia minha capacidade de resolver problemas com precisão e lógica.</p>
-                    </section>
-                </div>
-                <div class="hidden">
-                    <h3 class="fs-5 upper-text">Conhecimentos</h3>
-                    <section class="sobre-section">
-                        <p>Após explorar diferentes áreas da tecnologia, encontrei na Web meu principal campo de atuação. Tenho buscado constantemente evoluir como desenvolvedor, dominando tecnologias e padrões amplamente utilizados no mercado, como: Arquitetura MVC ORMs (Mapeamento Objeto-Relacional); APIs RESTful; Versionamento com Git e GitHub; Test-Driven Development (TDD); Integrações com serviços externos e microsserviços</p>
-                    </section>
-                </div>
+                    </div>
+                </article>
+                <article class="sobre-card hidden">
+                    <div class="sobre-card__head">
+                        <span class="sobre-card__icon" aria-hidden="true">▸</span>
+                        <h3>Conhecimentos</h3>
+                    </div>
+                    <div class="sobre-section">
+                        <p>Após explorar diferentes áreas da tecnologia, encontrei na web meu principal campo de atuação. Busco evoluir continuamente com tecnologias e padrões usados no mercado.</p>
+                        <ul class="skill-chips" aria-label="Tecnologias e práticas">
+                            <li>Arquitetura MVC</li>
+                            <li>ORMs</li>
+                            <li>APIs REST</li>
+                            <li>Git e GitHub</li>
+                            <li>TDD</li>
+                            <li>Integrações e microsserviços</li>
+                        </ul>
+                    </div>
+                </article>
             </div>
         </section>
 
         <section class="projetos" id="projetos">
-            <h2>Projetos</h2>
+            <h2 class="section-title section-title--inline">Projetos</h2>
             <div class="container-projetos">
-                <div class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    data-bs-content="marketplace">
-                    <h3 class="text-center">Marketplace</h3>
-                    <img src="files/marketplace/marketplace.gif" alt="Gif do projeto Marketplace">
-                    <p class="m-0">A implementação de uma plataforma de compra e venda de produtos, com tecnologias
-                        atuais e integração com Mercado Pago.</p>
-                    <button class="btn-saiba-mais">Saiba mais... &#x1F50E;</button>
+                <article class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-content="marketplace" tabindex="0" role="button"
+                    aria-label="Abrir detalhes do projeto Marketplace">
+                    <div class="projetos-section__media">
+                        <img src="files/marketplace/marketplace.gif" alt="Demonstração do projeto Marketplace">
+                    </div>
+                    <div class="projetos-section__body">
+                    <h3>Marketplace</h3>
+                    <p class="projetos-section__desc">Plataforma de compra e venda com stack atual e integração ao Mercado Pago.</p>
+                    <span class="btn-saiba-mais">Saiba mais</span>
                     <div class="tags">
                         <span class="tag laravel">Laravel</span> <span class="tag php">PHP</span> <span
                             class="tag mysql">MySQL</span> <span class="tag js">JavaScript</span> <span
                             class="tag css">CSS</span> <span class="tag html">HTML</span> <span
                             class="tag docker">Docker</span>
                     </div>
-                </div>
+                    </div>
+                </article>
 
-                <div class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    data-bs-content="piano">
-                    <h3 class="text-center">Piano com Gemini API</h3>
-                    <img src="files/piano/piano.gif" alt="Gif do projeto Piano com IA">
-                    <p class="m-0">Um projeto feito com a API do Gemini onde o usuário utiliza um prompt, comando,
-                        para
-                        que a IA
-                        gere e toque uma música em um piano.</p>
-                    <button class="btn-saiba-mais">Saiba mais... &#x1F50E;</button>
+                <article class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-content="piano" tabindex="0" role="button"
+                    aria-label="Abrir detalhes do projeto Piano com Gemini API">
+                    <div class="projetos-section__media">
+                        <img src="files/piano/piano.gif" alt="Demonstração do piano com IA Gemini">
+                    </div>
+                    <div class="projetos-section__body">
+                    <h3>Piano com Gemini API</h3>
+                    <p class="projetos-section__desc">Prompt em linguagem natural: a API Gemini gera notas e o piano toca automaticamente.</p>
+                    <span class="btn-saiba-mais">Saiba mais</span>
                     <div class="tags">
                         <span class="tag express">Express</span> <span class="tag node">Node.JS</span> <span
                             class="tag js">JavaScript</span> <span class="tag css">CSS</span> <span
                             class="tag html">HTML</span> <span class="tag docker">Docker</span>
                     </div>
-                </div>
+                    </div>
+                </article>
 
-                <div class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    data-bs-content="calculator">
-                    <h3 class="text-center">Calculadora do Windows</h3>
-                    <img src="files/calc/calc.gif" alt="Gif do projeto feito em Arduino">
-                    <p class="m-0">Um protótipo que simula a interface da calculadora do sistema Windows 10 de
-                        maneira funcional. Esse projeto foi desenvolvido com o intuito de praticar o básico sobre JS.
-                    </p>
-                    <button class="btn-saiba-mais">Saiba mais... &#x1F50E;</button>
+                <article class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-content="calculator" tabindex="0" role="button"
+                    aria-label="Abrir detalhes da Calculadora do Windows">
+                    <div class="projetos-section__media">
+                        <img src="files/calc/calc.gif" alt="Demonstração da calculadora estilo Windows 10">
+                    </div>
+                    <div class="projetos-section__body">
+                    <h3>Calculadora do Windows</h3>
+                    <p class="projetos-section__desc">Interface inspirada na calculadora do Windows 10, com operações básicas e avançadas em JavaScript.</p>
+                    <span class="btn-saiba-mais">Saiba mais</span>
                     <div class="tags">
                         <span class="tag js">JavaScript</span> <span class="tag html">HTML</span> <span
                             class="tag css">CSS</span>
                     </div>
-                </div>
+                    </div>
+                </article>
 
-                <div class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    data-bs-content="modelo">
-                    <h3 class="text-center">Site Modelo</h3>
-                    <img src="files/modelo/home.gif" alt="Gif do projeto feito em Arduino">
-                    <p class="m-0">Um site estático projetado para a divulgação da marca de uma empresa do ramo
-                        alimentício.
-                    </p>
-                    <button class="btn-saiba-mais">Saiba mais... &#x1F50E;</button>
+                <article class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-content="modelo" tabindex="0" role="button"
+                    aria-label="Abrir detalhes do Site Modelo">
+                    <div class="projetos-section__media">
+                        <img src="files/modelo/home.gif" alt="Página inicial do site modelo">
+                    </div>
+                    <div class="projetos-section__body">
+                    <h3>Site Modelo</h3>
+                    <p class="projetos-section__desc">Site estático para divulgação de marca no ramo alimentício, com Bootstrap onde fez sentido.</p>
+                    <span class="btn-saiba-mais">Saiba mais</span>
                     <div class="tags">
                         <span class="tag html">HTML</span> <span class="tag css">CSS</span> <span
                             class="tag bootstrap">Bootstrap</span>
                     </div>
-                </div>
+                    </div>
+                </article>
 
-                <div class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    data-bs-content="earth-defensor">
-                    <h3 class="text-center">Earth Defensor</h3>
-                    <img src="files/earth-defensor/earth-defensor.gif" alt="Gif do jogo Earth Defensor">
-                    <p class="m-0">Um jogo arcade com temática espacial no estilo roguelike, onde cada partida é
-                        diferente da anterior e o desafio aumenta progressivamente.</p>
-                    <button class="btn-saiba-mais">Saiba mais... &#x1F50E;</button>
+                <article class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-content="earth-defensor" tabindex="0" role="button"
+                    aria-label="Abrir detalhes do jogo Earth Defensor">
+                    <div class="projetos-section__media">
+                        <img src="files/earth-defensor/earth-defensor.gif" alt="Gameplay do Earth Defensor">
+                    </div>
+                    <div class="projetos-section__body">
+                    <h3>Earth Defensor</h3>
+                    <p class="projetos-section__desc">Arcade espacial roguelike: cada partida muda e a dificuldade sobe com o tempo.</p>
+                    <span class="btn-saiba-mais">Saiba mais</span>
                     <div class="tags">
                         <span class="tag love2d">Löve2D</span> <span class="tag lua">Lua</span>
                     </div>
-                </div>
+                    </div>
+                </article>
 
-                <div class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    data-bs-content="timberman">
-                    <h3 class="text-center">Timberman-on-Arduino</h3>
-                    <img src="files/timberman/timberman.gif" alt="Gif do projeto feito em Arduino">
-                    <p class="m-0">Simulação do jogo virtual Timberman na plataforma do Arduino utilizando alguns
-                        periféricos e lógica de programação.</p>
-                    <button class="btn-saiba-mais">Saiba mais... &#x1F50E;</button>
+                <article class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-content="timberman" tabindex="0" role="button"
+                    aria-label="Abrir detalhes do Timberman no Arduino">
+                    <div class="projetos-section__media">
+                        <img src="files/timberman/timberman.gif" alt="Demonstração do Timberman no Arduino">
+                    </div>
+                    <div class="projetos-section__body">
+                    <h3>Timberman-on-Arduino</h3>
+                    <p class="projetos-section__desc">Recriação do Timberman com Arduino, periféricos e lógica embarcada.</p>
+                    <span class="btn-saiba-mais">Saiba mais</span>
                     <div class="tags">
                         <span class="tag arduino">Arduino</span> <span class="tag cpp">C++</span>
                     </div>
-                </div>
+                    </div>
+                </article>
             </div>
         </section>
 

@@ -1,6 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     burgerMenu();
 
+    const nav = document.querySelector('.nav-sticky');
+    if (nav) {
+        const onNavScroll = () => {
+            nav.classList.toggle('nav-sticky--scrolled', window.scrollY > 32);
+        };
+        onNavScroll();
+        window.addEventListener('scroll', onNavScroll, { passive: true });
+    }
+
+    document.querySelectorAll('.projetos-section').forEach((card) => {
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.click();
+            }
+        });
+    });
+
     const exampleModal = document.getElementById('exampleModal');
     exampleModal.addEventListener('show.bs.modal', function (event) {
         const button = event.relatedTarget;
