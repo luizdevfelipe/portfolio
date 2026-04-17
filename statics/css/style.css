@@ -22,6 +22,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 @keyframes LuzPiscando {
@@ -35,16 +36,6 @@
     }
 }
 
-@keyframes LinhaPiscando {
-    0% {
-        content: "_";
-    }
-
-    50% {
-        content: "";
-    }
-}
-
 body {
     background: linear-gradient(180deg, #e8eeff 0%, #f0f4ff 38%, #eef2ff 100%) !important;
     color: var(--ink);
@@ -53,16 +44,6 @@ body {
 p {
     text-align: justify;
     text-indent: 20px;
-}
-
-.hidden {
-    opacity: 0;
-    transition: opacity 1s linear;
-}
-
-.hidden-off {
-    opacity: 1;
-    transition: opacity 1s linear;
 }
 
 .nav-sticky {
@@ -190,11 +171,6 @@ p {
     animation: LuzPiscando 6s ease-in-out 0s infinite;
 }
 
-.header h1::after {
-    content: '_';
-    animation: LinhaPiscando 2s ease-in-out 0s infinite;
-}
-
 .header h2 {
     font-size: 1.8em;
     text-align: right;
@@ -205,7 +181,7 @@ p {
 }
 
 .main a,
-.modal-body a {
+.project-modal__body a {
     text-decoration: none;
     color: black;
     border-radius: 5px;
@@ -214,12 +190,12 @@ p {
 }
 
 .main a::before,
-.modal-body a::before {
+.project-modal__body a::before {
     content: "\01F517";
 }
 
 .main a:hover,
-.modal-body a:hover {
+.project-modal__body a:hover {
     content: "\01F517";
 }
 
@@ -254,13 +230,237 @@ p {
     border-radius: var(--radius-micro);
 }
 
-.modal-backdrop {
-    --bs-backdrop-bg: rgb(15 23 42 / 78%);
-    --bs-backdrop-opacity: 1;
+body.project-modal-active {
+    overflow: hidden;
 }
 
-.modal-backdrop.fade {
-    transition: opacity 0.2s ease-in-out;
+.project-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.22s ease, visibility 0.22s ease;
+}
+
+.project-modal.project-modal--open {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+}
+
+.project-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgb(15 23 42 / 78%);
+    cursor: pointer;
+    border: none;
+    padding: 0;
+}
+
+.project-modal__panel {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 560px);
+    max-height: min(90dvh, 720px);
+    display: flex;
+    flex-direction: column;
+    background: var(--surface-elevated);
+    color: var(--ink);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 24px 64px rgba(15, 23, 42, 0.28);
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    overflow: hidden;
+    transform: translateY(8px) scale(0.98);
+    opacity: 0;
+    transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+.project-modal.project-modal--open .project-modal__panel {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.project-modal__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1rem 1.1rem;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    background: linear-gradient(90deg, var(--accent-soft), transparent);
+    flex-shrink: 0;
+}
+
+.project-modal__title {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    line-height: 1.3;
+}
+
+.project-modal__close {
+    flex-shrink: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: rgba(15, 23, 42, 0.06);
+    color: var(--ink);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.project-modal__close:hover {
+    background: rgba(99, 102, 241, 0.18);
+    color: #312e81;
+}
+
+.project-modal__close:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.project-modal__body {
+    padding: 1rem 1.1rem;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+}
+
+.project-modal__desc {
+    text-align: justify;
+    text-indent: 0;
+    margin: 0 0 1rem;
+    color: var(--ink-muted);
+    line-height: 1.65;
+    font-size: 0.95rem;
+}
+
+.project-modal__gh {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+
+.project-modal__gh svg {
+    flex-shrink: 0;
+}
+
+.project-modal__footer {
+    padding: 0.75rem 1.1rem 1rem;
+    border-top: 1px solid rgba(15, 23, 42, 0.08);
+    flex-shrink: 0;
+}
+
+.project-modal__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ink);
+    background: #e2e8f0;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-modal__btn:hover {
+    background: #cbd5e1;
+}
+
+.project-modal__btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.native-carousel {
+    position: relative;
+    margin-top: 0.25rem;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: linear-gradient(135deg, #e0e7ff, #f1f5f9);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.native-carousel__viewport {
+    position: relative;
+    height: 280px;
+}
+
+.native-carousel__slide {
+    display: none;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.native-carousel__slide--active {
+    display: flex;
+}
+
+.native-carousel__slide img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.native-carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.25rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: rgba(15, 23, 42, 0.35);
+    color: #fff;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    z-index: 2;
+}
+
+.native-carousel__btn:hover {
+    background: rgba(15, 23, 42, 0.55);
+}
+
+.native-carousel__btn:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.native-carousel__btn--prev {
+    left: 0.35rem;
+}
+
+.native-carousel__btn--next {
+    right: 0.35rem;
 }
 
 .sobre {
@@ -462,10 +662,6 @@ p {
     flex: 1;
 }
 
-#carrosselImageDiv {
-    height: 280px;
-}
-
 .btn-saiba-mais {
     align-self: flex-start;
     display: inline-flex;
@@ -475,16 +671,17 @@ p {
     padding: 0.3rem 0.65rem;
     font-size: 0.75rem;
     font-weight: 600;
-    color: var(--accent);
-    background: var(--accent-soft);
-    border: 1px solid var(--accent-border);
+    color: #1e1b4b;
+    background: #e0e7ff;
+    border: 1px solid #6366f1;
     box-shadow: none;
     text-shadow: none;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     pointer-events: none;
 }
 
 .projetos-section:hover .btn-saiba-mais {
-    background: rgba(99, 102, 241, 0.2);
-    color: #4338ca;
+    background: #c7d2fe;
+    color: #0f172a;
+    border-color: #4f46e5;
 }

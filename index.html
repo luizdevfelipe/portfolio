@@ -4,18 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfólio de Luiz Felipe Fávaro: desenvolvedor web focado em back-end (Laravel, Node.js, APIs). Estudante de Engenharia de Computação — projetos e links para GitHub.">
     <title>luizdevfelipe</title>
     <link rel="shortcut icon" href="files/favicon/favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="statics/css/style.css">
     <link rel="stylesheet" href="statics/css/tags.css">
     <link rel="stylesheet" href="statics/css/window.css" media="screen and (max-width: 1200px)">
     <link rel="stylesheet" href="statics/css/tablet.css" media="screen and (max-width: 550px)">
     <link rel="stylesheet" href="statics/css/mobile.css" media="screen and (max-width: 490px)">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
     <script src="statics/js/script.js" defer></script>
 </head>
 
@@ -77,7 +74,7 @@
         <section class="sobre" id="sobre">
             <h2 class="section-title section-title--inline">Sobre</h2>
             <div class="container-sobre">
-                <article class="sobre-card hidden">
+                <article class="sobre-card">
                     <div class="sobre-card__head">
                         <span class="sobre-card__icon" aria-hidden="true">◆</span>
                         <h3>Sobre mim</h3>
@@ -90,7 +87,7 @@
                         </p>
                     </div>
                 </article>
-                <article class="sobre-card hidden">
+                <article class="sobre-card">
                     <div class="sobre-card__head">
                         <span class="sobre-card__icon" aria-hidden="true">◇</span>
                         <h3>Formação</h3>
@@ -102,7 +99,7 @@
                             física, o que amplia minha capacidade de resolver problemas com precisão e lógica.</p>
                     </div>
                 </article>
-                <article class="sobre-card hidden">
+                <article class="sobre-card">
                     <div class="sobre-card__head">
                         <span class="sobre-card__icon" aria-hidden="true">▸</span>
                         <h3>Conhecimentos</h3>
@@ -125,8 +122,7 @@
         <section class="projetos" id="projetos">
             <h2 class="section-title section-title--inline">Projetos</h2>
             <div class="container-projetos">
-                <article class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    data-bs-content="marketplace" tabindex="0" role="button"
+                <article class="projetos-section" data-project="marketplace" tabindex="0" role="button"
                     aria-label="Abrir detalhes do projeto Marketplace">
                     <div class="projetos-section__media">
                         <img src="files/marketplace/marketplace.gif" alt="Demonstração do projeto Marketplace">
@@ -144,8 +140,7 @@
                     </div>
                 </article>
 
-                <article class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    data-bs-content="piano" tabindex="0" role="button"
+                <article class="projetos-section" data-project="piano" tabindex="0" role="button"
                     aria-label="Abrir detalhes do projeto Piano com Gemini API">
                     <div class="projetos-section__media">
                         <img src="files/piano/piano.gif" alt="Demonstração do piano com IA Gemini">
@@ -162,8 +157,7 @@
                     </div>
                 </article>
 
-                <article class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    data-bs-content="calculator" tabindex="0" role="button"
+                <article class="projetos-section" data-project="calculator" tabindex="0" role="button"
                     aria-label="Abrir detalhes da Calculadora do Windows">
                     <div class="projetos-section__media">
                         <img src="files/calc/calc.gif" alt="Demonstração da calculadora estilo Windows 10">
@@ -179,8 +173,7 @@
                     </div>
                 </article>
 
-                <article class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    data-bs-content="modelo" tabindex="0" role="button"
+                <article class="projetos-section" data-project="modelo" tabindex="0" role="button"
                     aria-label="Abrir detalhes do Site Modelo">
                     <div class="projetos-section__media">
                         <img src="files/modelo/home.gif" alt="Página inicial do site modelo">
@@ -196,8 +189,7 @@
                     </div>
                 </article>
 
-                <article class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    data-bs-content="earth-defensor" tabindex="0" role="button"
+                <article class="projetos-section" data-project="earth-defensor" tabindex="0" role="button"
                     aria-label="Abrir detalhes do jogo Earth Defensor">
                     <div class="projetos-section__media">
                         <img src="files/earth-defensor/earth-defensor.gif" alt="Gameplay do Earth Defensor">
@@ -212,8 +204,7 @@
                     </div>
                 </article>
 
-                <article class="projetos-section" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    data-bs-content="timberman" tabindex="0" role="button"
+                <article class="projetos-section" data-project="timberman" tabindex="0" role="button"
                     aria-label="Abrir detalhes do Timberman no Arduino">
                     <div class="projetos-section__media">
                         <img src="files/timberman/timberman.gif" alt="Demonstração do Timberman no Arduino">
@@ -231,24 +222,23 @@
         </section>
 
     </main>
-</body>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Título</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle"
+        aria-hidden="true" hidden>
+        <div class="project-modal__backdrop" data-modal-dismiss tabindex="-1"></div>
+        <div class="project-modal__panel">
+            <header class="project-modal__header">
+                <h2 class="project-modal__title" id="projectModalTitle">Título</h2>
+                <button type="button" class="project-modal__close" data-modal-dismiss aria-label="Fechar">×</button>
+            </header>
+            <div class="project-modal__body">
+                <!-- preenchido via JS -->
             </div>
-            <div class="modal-body">
-                <!-- Conteúdo -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-            </div>
+            <footer class="project-modal__footer">
+                <button type="button" class="project-modal__btn" data-modal-dismiss>Fechar</button>
+            </footer>
         </div>
     </div>
-</div>
+</body>
 
 </html>
